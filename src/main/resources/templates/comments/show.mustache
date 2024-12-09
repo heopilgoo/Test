@@ -1,0 +1,27 @@
+{{> layouts/header}}
+
+<div class="container mt-4">
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+
+    <hr>
+    <h3>Comments</h3>
+
+    {{#comments}}
+        <div class="mb-3">
+            <strong>{{author}}</strong>
+            <p>{{content}}</p>
+            <a href="/posts/{{post.id}}/comments/{{id}}/delete" class="btn btn-danger btn-sm">Delete</a>
+        </div>
+    {{/comments}}
+
+    <hr>
+    <h4>Add a Comment</h4>
+    <form action="/posts/{{post.id}}/comments" method="post">
+        <textarea name="content" class="form-control" rows="3" required></textarea>
+        <input type="text" name="author" class="form-control mt-2" placeholder="Your Name" value="Anonymous">
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </form>
+</div>
+
+{{> layouts/footer}}

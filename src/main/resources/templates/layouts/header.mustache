@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Soccer GOGO!</title>
+</head>
+<body>
+
+<h1 class="text-center my-4">Soccer GOGO!</h1>
+
+<!-- 헤더 -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/posts">Soccer GOGO!</a> <!-- "홈" 버튼을 게시글 목록으로 연결 -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/posts">홈</a> <!-- "홈" 링크 수정 -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/teams">리그/컵</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tv">싸줄 TV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/posts">게시판</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/login">로그인</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/register">회원가입</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{{#msg}}
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        {{msg}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/msg}}
+
+<!-- 여기에 본문 내용을 추가 -->
+<!-- 예: <div class="container"> 본문 내용 </div> -->
+
+<!-- Bootstrap JS (optional for components like dropdown, modal, etc.) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-5P8Zq6mcb7y/qm5LPZSlP02sv9z6TPMbTZQk2eGfrr2BxUJpJE9o2MyOqYA5pz+Y" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-3dJtftIcj5nTgo9ZYXCVhQgq14jbKq91cfO8BCkV9hfMjkp9Lg/xH7XWChTM2HkR" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+{{> layouts/header}}
+
+<div class="container mt-4">
+    <h1>{{post.title}}</h1>
+    <p>{{post.content}}</p>
+
+    <div class="mb-3">
+        <a href="/posts/{{post.id}}/edit" class="btn btn-warning">수정</a>
+        <form action="/posts/{{post.id}}/delete" method="post" style="display:inline;">
+            <button type="submit" class="btn btn-danger">삭제</button>
+        </form>
+    </div>
+
+    <hr>
+    <h3>댓글 목록</h3>
+    {{#comments}}
+        <div class="mb-3">
+            <strong>{{author}}</strong>
+            <p>{{content}}</p>
+        </div>
+    {{/comments}}
+
+    <hr>
+    <h4>댓글을 추가하세요</h4>
+    <form action="/posts/{{post.id}}/comments" method="post">
+        <div class="mb-3">
+            <label for="author" class="form-label">작성자</label>
+            <input type="text" class="form-control" id="author" name="author" required>
+        </div>
+        <div class="mb-3">
+            <label for="content" class="form-label">댓글</label>
+            <textarea class="form-control" id="content" name="content" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">등록하기</button>
+    </form>
+</div>
+
+{{> layouts/footer}}

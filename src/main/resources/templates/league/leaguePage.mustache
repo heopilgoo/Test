@@ -1,0 +1,19 @@
+{{> layouts/header}}
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">{{leagueName}} 리그 팀들</h2>
+    <div class="row">
+        {{#teams}}
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="/static/images/{{image}}" class="card-img-top" alt="{{name}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                    </div>
+                </div>
+            </div>
+        {{/teams}}
+    </div>
+</div>
+
+{{> layouts/footer}}

@@ -1,0 +1,16 @@
+<h1>{{post.title}}</h1>
+<p>{{post.content}}</p>
+
+<h2>댓글</h2>
+{{#comments}}
+    <div>
+        <p>{{content}}</p>
+        <p>작성자: {{author}}</p>
+    </div>
+{{/comments}}
+
+<form action="/posts/{{post.id}}/comments" method="post">
+    <textarea name="content" required></textarea>
+    <input type="text" name="author" placeholder="Your Name" value="Anonymous">
+    <button type="submit">댓글 작성</button>
+</form>
